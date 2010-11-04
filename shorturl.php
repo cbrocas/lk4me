@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
   //get url and obtain a digest of it through sha-1 algo
   $url = filter_var($_GET["url"],FILTER_VALIDATE_URL);
   
