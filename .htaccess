@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule shorturl.php - [L]
+RewriteRule redirecturl.php - [L]
+RewriteRule info.php - [L]
+RewriteRule (.*) redirecturl.php?url=$1 [L]
