@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteRule index.htmk - [L]
 RewriteRule shorturl.php - [L]
 RewriteRule redirecturl.php - [L]
 RewriteRule (.*) redirecturl.php?url=$1 [L]
