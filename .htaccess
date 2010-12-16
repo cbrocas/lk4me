@@ -1,5 +1,2 @@
 RewriteEngine On
-RewriteRule index.html - [L]
-RewriteRule shorturl.php - [L]
-RewriteRule redirecturl.php - [L]
-RewriteRule (.*) redirecturl.php?url=$1 [L]
+RewriteRule ^([a-z0-9]{6})$ redirecturl.php?url=$1 [L]
