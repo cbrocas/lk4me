@@ -62,11 +62,11 @@
 
       if (is_file($filepath)) {
           $f = fopen($filepath,"r");
-          $urlinfile = fgets($f,16000);
+          $urlinfile = file_get_contents($filepath);
           fclose($f); 
 
           if ($urlinfile == $url) {
-              echo "- SHORT URL (already known): [".$shorturl."] shift:".$shift;
+              echo "- SHORT URL (already known): [".$shorturl."] ";
               break;
           }
           else {
@@ -83,7 +83,7 @@
           fputs($f, $url);
           fclose($f);
   
-          echo "- SHORT URL (new): [" .$shorturl."] shift:".$shift."<br/>";
+          echo "- SHORT URL (new): [" .$shorturl."] <br/>";
           break;
       }
   }
