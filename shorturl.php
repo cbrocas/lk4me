@@ -19,7 +19,7 @@
 */
 
   // filter url received through Query String
-  $url = filter_var($_GET["url"],FILTER_VALIDATE_URL);
+  $url = filter_var($_GET["url"],FILTER_SANITIZE_URL);
   
   $hash = sha1($url);
 
