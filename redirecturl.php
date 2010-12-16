@@ -20,7 +20,12 @@
 
   //get url and obtain a digest of it through sha-1 algo
   $hash = $_GET["url"];
-
+  
+  // validate url parameter (numbers or letters, 6 chars long))
+  if (preg_match_all("$([a-z0-9]{6})$",$hash,$values) != 1) {
+      echo "Not a valid URL value. Bye !";
+      exit;
+  }
   // extract from the digest the firt 2 chars and the first 6 characters
 
   $character1 = substr($hash, 0, 1);
