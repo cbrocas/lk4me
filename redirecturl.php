@@ -23,7 +23,7 @@
   
   // validate url parameter (numbers or letters, 6 chars long))
   if ((preg_match("$([a-z0-9]{6})$",$hash,$values) != 1)||(strlen($hash)!=6)) {
-      echo "Not a valid URL value.. Bye !";
+      echo "Not a valid URL value. Bye !";
       exit;
   }
   
