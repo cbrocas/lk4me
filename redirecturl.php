@@ -18,30 +18,23 @@
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+  require('lk4me.php');
+
   //get url and obtain a digest of it through sha-1 algo
-  $hash = $_GET["url"];
+  $shortURL = $_GET["url"];
   
-  // validate url parameter (numbers or letters, 6 chars long))
-  if ((preg_match("$([a-z0-9]{6})$",$hash,$values) != 1)||(strlen($hash)!=6)) {
-      echo "Not a valid URL value. Bye !";
+  if (!validShortURL($shortURL)) {
+      include('lk4me.html.inc.php');
+      echo "Not a valid Short URL value. Bye !";
       exit;
   }
   
-  // extract from the digest the firt 2 chars and the first 6 characters
-  $character1 = substr($hash, 0, 1);
-  $character2 = substr($hash, 1, 1);
-
-  $filepath = $character1."/".$character2."/".$hash;
-
-  if (is_file($filepath)) {
-      $f = fopen($filepath,"r");
-      $urlinfile = fgets($f,16000);
-      fclose($f); 
+  $urlinfile = "";
+  if (existingShortURL($shortURL, &$urlinfile)) {
       header("Location: ".$urlinfile);
   }
-  else {
-      var_dump(is_file($filepath)) . "\n";    
-      echo " error -- no URL has this hash [" .$hash."]<br/>";
+  else  { 
+      include('lk4me.html.inc.php');
+      echo $shortURL." is not an existing short URL value.";
   }
-
 ?>
