@@ -17,13 +17,15 @@
   You should have received a copy of the GNU General Public License
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
+  
+  include('lk4me.html.inc.php');
 
   // filter url received through Query String
   $url = filter_var($_GET["url"],FILTER_SANITIZE_URL);
   
   $hash = sha1($url);
 
-  echo "Your URL [".$url."]<br/>";
+  echo "URL: ".$url." <br/><br/>";
   
   // extract the path to the script from the URL
   // to generate the path to the short URL
@@ -66,7 +68,7 @@
           fclose($f); 
 
           if ($urlinfile == $url) {
-              echo "- SHORT URL (already known): [".$shorturl."] ";
+              echo "<span class=\"red\">" .$shorturl."</span> <br/>";
               break;
           }
           else {
@@ -83,7 +85,7 @@
           fputs($f, $url);
           fclose($f);
   
-          echo "- SHORT URL (new): [" .$shorturl."] <br/>";
+          echo "SHORT URL (new): <span class=\"red\">" .$shorturl."</span> <br/>";
           break;
       }
   }
@@ -93,3 +95,5 @@
       echo "[".$hash."]";
   }
 ?>
+</body>
+</html>
