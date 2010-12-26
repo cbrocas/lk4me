@@ -63,10 +63,8 @@
       $shorturl = $baseurl . $hash6characters;
 
       if (is_file($filepath)) {
-          $f = fopen($filepath,"r");
           $urlinfile = file_get_contents($filepath);
-          fclose($f); 
-
+          
           if ($urlinfile == $url) {
               echo "<span class=\"red\">" .$shorturl."</span> <br/>";
               break;
