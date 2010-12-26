@@ -53,11 +53,19 @@ function existingShortURL($shortURL, $urlinfile="")
 
   $filepath = $character1."/".$character2."/".$shortURL;
 
+  $result=file_get_contents("http://www.example.com");
+  if ($result === false)
+  {
+    // treat error
+  } else {
+    // handle good case
+  } 
+
   if (is_file($filepath)) {
-      $f = fopen($filepath,"r");
-      $urlinfile = file_get_contents($f);
-      fclose($f);
-      return True;
+      $urlinfile = file_get_contents($filepath);
+      if ($urlinfile === false)
+          return False;
+      return True; 
   }
   else return False;
 }
