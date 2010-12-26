@@ -69,4 +69,28 @@ function existingShortURL($shortURL, $urlinfile="")
   }
   else return False;
 }
+
+/**
+ * Returns the base of the URI of the current URI in the browser.
+ * extract the path to the script from the URI
+ * to generate the path to the short URI
+ * Example 1 : 
+ * . uri = http://domain.tld/shorturl.php?url=xxx
+ * . baseurl = http://domain.tld/
+ * Example 2 :
+ * . uri = http://domain.tld/test/shorturl.php?url=xxx
+ * . baseurl = http://domain.tld/test/
+ * @return String URI base of the current URI
+ */
+function getURIbase(){
+
+  $baseuri = "http://".$_SERVER['HTTP_HOST']."/";
+  $tmp = explode("/",$_SERVER['SCRIPT_NAME']);
+  $count = count($tmp) - 1;
+
+  for ($i=1;$i<$count;$i++) {
+       $baseuri = $baseuri . $tmp[$i] ."/";
+  }
+  return $baseuri;
+}
 ?>
