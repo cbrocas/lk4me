@@ -19,31 +19,13 @@
 */
   
   include('lk4me.html.inc.php');
+  require('lk4me.php');
 
   // filter url received through Query String
   $url = filter_var($_GET["url"],FILTER_SANITIZE_URL);
   
   $hash = sha1($url);
-
-  echo "URL: ".$url." <br/><br/>";
-  
-  // extract the path to the script from the URL
-  // to generate the path to the short URL
-  // Example 1 : 
-  // . url = http://domain.tld/shorturl.php?url=xxx
-  // . baseurl = http://domain.tld/
-  // Example 2 :
-  // . url = http://domain.tld/test/shorturl.php?url=xxx
-  // . baseurl = http://domain.tld/test/
-
-  $baseurl = "http://".$_SERVER['HTTP_HOST']."/";
-  $tmp = explode("/",$_SERVER['SCRIPT_NAME']);
-  $count = count($tmp) - 1;
-
-  for ($i=1;$i<$count;$i++) {
-       $baseurl = $baseurl . $tmp[$i] ."/";
-  }
-  
+  $baseurl = getURIbase();
   $shift = 0;
 
   while($shift < 6) {
@@ -66,7 +48,6 @@
           $urlinfile = file_get_contents($filepath);
           
           if ($urlinfile == $url) {
-              echo "<span class=\"red\">" .$shorturl."</span> <br/>";
               break;
           }
           else {
@@ -82,16 +63,15 @@
           $f = fopen($filepath,"w+");
           fputs($f, $url);
           fclose($f);
-  
-          echo "SHORT URL (new): <span class=\"red\">" .$shorturl."</span> <br/>";
           break;
       }
   }
   
   if ($shift==6) { 
-      echo "ERROR: Unable to generate a free value of 6 characters for the short URL. Sorry";
-      echo "[".$hash."]";
+      echo "<span class=\"red\">ERROR: Unable to generate a free value of 6 characters for the short URL. Sorry</span> <br/>";
+
   }
+  require('form.html.inc.php');
 ?>
 </body>
 </html>
