@@ -18,16 +18,11 @@
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+  require('lk4me.php');
   include('lk4me.html.inc.php');
+  $shorturl=getURIbase()."...";
+  require('form.html.inc.php');
 ?>
-
-<form id="url" name="URL" action="shorturl.php" method="GET" enctype="application/x-www-form-urlencoded" novalidate="novalidate">
-
-Your long URL : <br/>
-<input type="url" name="url" size="80" >
-<button type="submit" name="go">shorten !</button>
-<br>
-</form>  
 
 </body>
 </html>
