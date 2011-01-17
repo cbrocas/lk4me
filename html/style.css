@@ -1,7 +1,7 @@
 body {
   color:black;
   background-color:white;
-  background-image:url(images/balloongirl2.jpg);
+  background-image:url(/images/balloongirl2.jpg);
   background-repeat:no-repeat;
   font-family: 'Yanone Kaffeesatz', arial, serif; 
 }
