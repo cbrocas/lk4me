@@ -18,8 +18,8 @@
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
   
-  include('lk4me.html.inc.php');
-  require('lk4me.php');
+  include('html/lk4me.html.inc.php');
+  require('lib/lk4me.php');
 
   // filter url received through Query String
   $url = filter_var($_GET["url"],FILTER_SANITIZE_URL);

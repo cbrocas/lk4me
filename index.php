@@ -18,10 +18,10 @@
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-  require('lk4me.php');
-  include('lk4me.html.inc.php');
+  require('lib/lk4me.php');
+  include('html/lk4me.html.inc.php');
   $shorturl=getURIbase()."...";
-  require('form.html.inc.php');
+  require('html/form.html.inc.php');
 ?>
 
 </body>

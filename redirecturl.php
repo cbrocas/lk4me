@@ -18,13 +18,13 @@
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-  require('lk4me.php');
+  require('lib/lk4me.php');
 
   //get url and obtain a digest of it through sha-1 algo
   $shortURL = $_GET["url"];
   
   if (!validShortURL($shortURL)) {
-      include('lk4me.html.inc.php');
+      include('html/lk4me.html.inc.php');
       echo "Not a valid Short URL value. Bye !";
       exit;
   }
@@ -34,7 +34,7 @@
       header("Location: ".$urlinfile);
   }
   else  { 
-      include('lk4me.html.inc.php');
+      include('html/lk4me.html.inc.php');
       echo $shortURL." is not an existing short URL value.";
   }
 ?>
