@@ -23,7 +23,7 @@
 <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>    
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 <title>link for me. your URL shortener :)</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="html/style.css" />
 <link rel="icon" type="image/jpeg" href="images/favicon2.jpg" />
 </head>
 
