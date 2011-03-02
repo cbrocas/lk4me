@@ -92,8 +92,8 @@ function getURIbase(){
  * a hash which the six first characters are not already used
  * and shorturl variable left unset.
  * 
- * @param String $hash the sha-1 hash of the long URI
- * @param String $baseurl the URL stored in the file and matching with the short URL 
+ * @param String $url the long URL that has to be shorten
+ * @param String $baseurl the base of the short URL (for ex. : http://lk4.me/)
  * @param String $shortURL the short URL value set by the function
  * @return Boolean True if the function has been able to generate a short URL
  * Returns false if we were unable to generate, after 6 attemtps, 
