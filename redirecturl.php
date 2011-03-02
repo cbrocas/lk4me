@@ -28,7 +28,7 @@
       echo "Not a valid Short URL value. Bye !";
       exit;
   }
-  
+  	
   $urlinfile = "";
   if (existingShortURL($shortURL, &$urlinfile)) {
       header("Location: ".$urlinfile);

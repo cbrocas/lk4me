@@ -87,19 +87,23 @@ function getURIbase(){
 }
 
 /**
- * Returns the base of the URI of the current URI in the browser.
- * extract the path to the script from the URI
- * to generate the path to the short URI
- * Example 1 : 
- * . uri = http://domain.tld/shorturl.php?url=xxx
- * . baseurl = http://domain.tld/
- * Example 2 :
- * . uri = http://domain.tld/test/shorturl.php?url=xxx
- * . baseurl = http://domain.tld/test/
- * @return String URI base of the current URI
+ * @return Boolean True and the short url value is stored in the shorturl variable.
+ * Returns false if we were unable to generate, after 6 attemtps, 
+ * a hash which the six first characters are not already used
+ * and shorturl variable left unset.
+ * 
+ * @param String $hash the sha-1 hash of the long URI
+ * @param String $baseurl the URL stored in the file and matching with the short URL 
+ * @param String $shortURL the short URL value set by the function
+ * @return Boolean True if the function has been able to generate a short URL
+ * Returns false if we were unable to generate, after 6 attemtps, 
+ * a hash which the six first characters are not already used and shorturl variable 
+ * left unset.
+
  */
-function getShortURI($hash, $baseurl){
+function generateShortURI($url, $baseurl, $shorturl=""){
   $shift = 0;
+  $hash=sha1($url);
 
   while($shift < 6) {
       // extract from the digest the firt 2 chars and the first 6 characters
@@ -139,7 +143,12 @@ function getShortURI($hash, $baseurl){
           break;
       }
   }
-  
-  if ($shift==6) ;
+  // if we were unable to generate, after 6 attemtps, a hash which the six first characters 
+  // are not already used, return false and shorturl variable left unset.
+  // Else, return true and the short url value is stored in the shorturl variable.  
+  if ($shift==6) 
+     return false;
+  else
+     return $shorturl;
 } 
 ?>

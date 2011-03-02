@@ -22,7 +22,7 @@
 <form id="url" name="URL" action="shorturl.php" method="GET" enctype="application/x-www-form-urlencoded" novalidate="novalidate">
 
 Your long URL :<br>
-<input type="url" name="url" size="40" value="<?php echo $url; ?>" >
+<input type="url" name="url" size="40" value="<?php if (isset($url)) echo $url; ?>" >
 <button type="submit" name="go">shorten !</button>
 <span class="red"><?php echo $shorturl;?></span>
 </form>  
