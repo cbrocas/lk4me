@@ -101,7 +101,7 @@ function getURIbase(){
  * left unset.
 
  */
-function generateShortURI($url, $baseurl, $shorturl=""){
+function generateShortURI($url, $baseurl, &$shorturl=""){
   $shift = 0;
   $hash=sha1($url);
 

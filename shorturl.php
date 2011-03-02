@@ -28,7 +28,7 @@
   $shorturl = "";
 
   // display error message if unable to generate a short url for a long one
-  if (!generateShortURI($url, $baseurl, &$shorturl))
+  if (!generateShortURI($url, $baseurl, $shorturl))
   { 
       echo "<span class=\"red\">ERROR: Unable to generate a free value of 6 characters for the short URL. Sorry</span> <br/>";
 
