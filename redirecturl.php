@@ -30,7 +30,7 @@
   }
   	
   $urlinfile = "";
-  if (existingShortURL($shortURL, &$urlinfile)) {
+  if (existingShortURL($shortURL, $urlinfile)) {
       header("Location: ".$urlinfile);
   }
   else  { 

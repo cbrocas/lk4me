@@ -45,7 +45,7 @@ function validShortURL($shortURL)
  * @param String $urlinfile the URL stored in the file and matching with the short URL 
  * @return Boolean True if short URL value matchs with an existing URL
  */
-function existingShortURL($shortURL, $urlinfile="")
+function existingShortURL($shortURL, &$urlinfile="")
 {
   // extract from the digest the firt 2 chars and the first 6 characters
   $character1 = substr($shortURL, 0, 1);
