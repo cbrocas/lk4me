@@ -26,3 +26,15 @@ Your long URL :<br>
 <button type="submit" name="go">shorten !</button>
 <span class="red"><?php echo $shorturl;?></span>
 </form>  
+<?php
+//include only that one, rest required files will be included from it
+include "phpqrcode/qrlib.php";
+
+// display the QRCode of the shorten URL if :
+// . short url is a valid short url
+// . gd library extension for php is loaded FilePathFromShortURL($shorturl)
+if (extension_loaded('gd') && function_exists('gd_info') && ($shorturl!=getURIbase()."...")) 
+//   QRcode::png($shorturl);
+   QRcode::png($shorturl, 'test.png', 'L', 2, 1);
+?>
+<img class="qrcode" src="test.png" alt="qrcode for <?php echo $shorturl?>" />
