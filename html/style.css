@@ -6,7 +6,7 @@ body {
   font-family: 'Yanone Kaffeesatz', arial, serif; 
 }
 
-.red {color:red; margin-left:10px; font-size:x-large;}
+.red {color:red; margin-left:10px; font-size:large;}
 .qrcode {margin-left:478px;}
 
 form#url button {
