@@ -34,7 +34,11 @@ include "phpqrcode/qrlib.php";
 // . short url is a valid short url
 // . gd library extension for php is loaded FilePathFromShortURL($shorturl)
 if (extension_loaded('gd') && function_exists('gd_info') && ($shorturl!=getURIbase()."...")) 
-//   QRcode::png($shorturl);
-   QRcode::png($shorturl, 'test.png', 'L', 2, 1);
+{
+   $qrcodefilepath = FilePathFromShortURL($shorturl).".png";
+   QRcode::png($shorturl, $qrcodefilepath, 'L', 2, 1);
 ?>
-<img class="qrcode" src="test.png" alt="qrcode for <?php echo $shorturl?>" />
+<img class="qrcode" src="<?php echo $qrcodefilepath;?>" alt="qrcode for <?php echo FilePathFromShortURL($shorturl);?>" />
+<?php
+}
+?>
