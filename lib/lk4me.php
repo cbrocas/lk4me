@@ -151,4 +151,23 @@ function generateShortURI($url, $baseurl, &$shorturl=""){
   else
      return $shorturl;
 } 
+
+/**
+ * Return the 6 chars long string of the short URL value .
+ * 
+ * @param String $shortURL short URL value
+ * @return string the 6 chars long value of the short URL value
+ */
+function FilePathFromShortURL($shortURL)
+{
+  // extract the final part of the short URL
+  $sixcharsstr = strrchr($shortURL, "/");
+  $sixcharsstr = substr($sixcharsstr,1);
+  $character1 = substr($sixcharsstr, 0, 1);
+  $character2 = substr($sixcharsstr, 1, 1);
+      
+  $dirpath = $character1."/".$character2;
+  return $dirpath."/".$sixcharsstr;
+}
+
 ?>
