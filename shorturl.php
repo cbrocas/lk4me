@@ -33,9 +33,25 @@
       echo "<span class=\"red\">ERROR: Unable to generate a free value of 6 characters for the short URL. Sorry</span> <br/>";
 
   }
-  // if we succeed to generate the shorturl, the shorturl var set 
-  // by the function will be displayed.
-  require('html/form.html.inc.php');
+  else
+  {
+      // if we succeed to generate the shorturl :
+      // . we check if we can generate the QRcode file associated with the shorturl
+      // . we display the shorturl var set by the function will be displayed.
+      
+      // generate the QRCode of the shorten URL if :
+      // . gd library extension for php
+      // . shorturl is a valid short url
+      // . the QRcode file has not have been already generated
+      $qrcodefilepath = FilePathFromShortURL($shorturl).".png";
+      
+      if (extension_loaded('gd') && function_exists('gd_info') && ($shorturl!=getURIbase()."...") && !(is_file($qrcodefilepath))) 
+      {
+          require "phpqrcode/qrlib.php";
+          QRcode::png($shorturl, $qrcodefilepath, 'L', 2, 1);
+      }
+      require('html/form.html.inc.php');
+  }
 ?>
 </body>
 </html>
