@@ -27,18 +27,15 @@ Your long URL :<br>
 <span class="red"><?php echo $shorturl;?></span>
 </form>  
 <?php
-//include only that one, rest required files will be included from it
-include "phpqrcode/qrlib.php";
 
 // display the QRCode of the shorten URL if :
 // . short url is a valid short url
 // . gd library extension for php is loaded FilePathFromShortURL($shorturl)
-if (extension_loaded('gd') && function_exists('gd_info') && ($shorturl!=getURIbase()."...")) 
+$qrcodefilepath = FilePathFromShortURL($shorturl).".png";
+if ((is_file($qrcodefilepath)) && ($shorturl!=getURIbase()."...")) 
 {
-   $qrcodefilepath = FilePathFromShortURL($shorturl).".png";
-   QRcode::png($shorturl, $qrcodefilepath, 'L', 2, 1);
 ?>
-<img class="qrcode" src="<?php echo $qrcodefilepath;?>" alt="qrcode for <?php echo FilePathFromShortURL($shorturl);?>" />
+<img class="qrcode" src="<?php echo $qrcodefilepath;?>" alt="qrcode for <?php echo qrcodefilepath;?>" />
 <?php
 }
 ?>
