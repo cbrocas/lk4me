@@ -75,8 +75,17 @@ function existingShortURL($shortURL, &$urlinfile="")
  * @return String URI base of the current URI
  */
 function getURIbase(){
+  $baseuri = 'http';
+  
+  if ($_SERVER["HTTPS"] == "on") {$baseuri .= "s";}
+  $base .= "://";
+  
+  if ($_SERVER["SERVER_PORT"] != "80") {
+     $baseuri .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"]."/";
+  } else {
+         $baseuri .= $_SERVER["SERVER_NAME"]."/";
+  }
 
-  $baseuri = "http://".$_SERVER['HTTP_HOST']."/";
   $tmp = explode("/",$_SERVER['SCRIPT_NAME']);
   $count = count($tmp) - 1;
 
