@@ -8,8 +8,6 @@ lk4me (link for me) is an URL shortener developed in PHP. It is released under t
 
 It requires **no other requirement than PHP**. No database, only flat files to store URL.
 
-lk4me is used by the free (as in beer and as a speech) webservice http://lk4.me/ .
-
 Principles :
 ------------
 lk4me works like this :
