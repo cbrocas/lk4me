@@ -78,7 +78,7 @@ function getURIbase(){
   $baseuri = 'http';
   
   if ($_SERVER["HTTPS"] == "on") {$baseuri .= "s";}
-  $base .= "://";
+  $baseuri .= "://";
   
   if ($_SERVER["SERVER_PORT"] != "80") {
      $baseuri .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"]."/";
