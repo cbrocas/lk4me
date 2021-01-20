@@ -24,9 +24,20 @@
 Your long URL :<br>
 <input type="url" name="url" size="40" value="<?php if (isset($url)) echo $url; ?>" >
 <button type="submit" name="go">shorten !</button>
-<span class="red"><?php echo $shorturl;?></span>
 </form>  
+<br/>
+
 <?php
+// Display shortened URL if its value has been updated
+if ($shorturl!=getURIbase()."...")
+{
+?>
+
+Your short link:<br/>
+<span class="red"><?php echo $shorturl;?></span><br/>
+
+<?php
+}
 
 // display the QRCode of the shorten URL if :
 // . short url is a valid short url

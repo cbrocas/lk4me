@@ -22,6 +22,7 @@
   include('html/lk4me.html.inc.php');
   $shorturl=getURIbase()."...";
   require('html/form.html.inc.php');
+  require('html/footer.html.inc.php');
 ?>
 
 </body>

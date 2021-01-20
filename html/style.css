@@ -1,13 +1,11 @@
 body {
   color:black;
   background-color:white;
-  background-image:url(/images/balloongirl2.jpg);
-  background-repeat:no-repeat;
   font-family: 'Yanone Kaffeesatz', arial, serif; 
 }
 
-.red {color:red; margin-left:10px; font-size:large;}
-.qrcode {margin-left:478px;}
+.red {color:red; font-size:large;}
+.qrcode {}
 
 form#url button {
 -moz-border-radius:20px 20px 20px 20px;

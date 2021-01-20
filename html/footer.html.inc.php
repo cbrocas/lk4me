@@ -18,18 +18,12 @@
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
 ?>
-<!DOCTYPE html>
-<html><head>
-<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>    
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<title>Link-4-Me. Your URL shortener :)</title>
-<link rel="stylesheet" type="text/css" href="html/style.css" />
-<link rel="icon" type="image/png" href="images/url16.png" />
-</head>
 
-<body >
-
-<img src="images/url64.png" alt="Link 4 me icon"> Link-4-Me. Your URL shortener.
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<a href="https://github.com/cbrocas/lk4me">code</a> | <a href="https://github.com/cbrocas/lk4me/blob/master/COPYING">license (GPL v3.0)</a> | icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>

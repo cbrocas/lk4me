@@ -52,6 +52,8 @@
       }
       require('html/form.html.inc.php');
   }
+
+  require('html/footer.html.inc.php');
 ?>
 </body>
 </html>
