@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^([a-z0-9]{6})$ redirecturl.php?url=$1 [L]
+RewriteRule ^([a-z0-9]+)$ redirecturl.php?url=$1 [L]
