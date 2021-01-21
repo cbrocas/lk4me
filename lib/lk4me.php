@@ -51,7 +51,7 @@ function existingShortURL($shortURL, &$urlinfile="")
   $character1 = substr($shortURL, 0, 1);
   $character2 = substr($shortURL, 1, 1);
 
-  $filepath = $character1."/".$character2."/".$shortURL;
+  $filepath = "store/".$character1."/".$character2."/".$shortURL;
 
   if (is_file($filepath)) {
       $urlinfile = file_get_contents($filepath);
@@ -120,7 +120,7 @@ function generateShortURI($url, $baseurl, &$shorturl=""){
       $character2 = substr($hash, $shift+1, 1);
       $hash6characters = substr($hash, $shift, 6);
       
-      $dirpath = $character1."/".$character2;
+      $dirpath = "store/".$character1."/".$character2;
       $filepath = $dirpath."/".$hash6characters;
 
       // if the directories of the filepath do not exist, create them
@@ -175,7 +175,7 @@ function FilePathFromShortURL($shortURL)
   $character1 = substr($sixcharsstr, 0, 1);
   $character2 = substr($sixcharsstr, 1, 1);
       
-  $dirpath = $character1."/".$character2;
+  $dirpath = "store/".$character1."/".$character2;
   return $dirpath."/".$sixcharsstr;
 }
 

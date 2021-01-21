@@ -16,7 +16,7 @@ lk4me works like this :
 - it hashs them using sha-1,
 - it takes the first 6 characters of the sha-1 digest (example : abcdef) ,
 - these 6 characters ( abcdef ) became the short url (http://domain.tld/abcdef),
-- the long url is stored in a flat file whose pathname is /a/b/abcdef
+- the long url is stored in a flat file located under DocumentRoot/store directory. Full pathname: DocumentRoot/store/a/b/abcdef.
 
 **Collision handling:**
 In case of a collision with a short link value that has been previously generated, lk4me will:
