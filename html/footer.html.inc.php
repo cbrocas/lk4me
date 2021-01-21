@@ -21,9 +21,5 @@
 
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<a href="https://github.com/cbrocas/lk4me">code</a> | <a href="https://github.com/cbrocas/lk4me/blob/master/COPYING">license (GPL v3.0)</a> | icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+---<br/>
+lk4me: <a href="https://github.com/cbrocas/lk4me">code</a> | <a href="https://github.com/cbrocas/lk4me/blob/master/COPYING">license (GPL v3.0)</a> | icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
