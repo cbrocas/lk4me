@@ -21,7 +21,7 @@ lk4me works like this :
 **Collision handling:**
 In case of a collision with a short link value that has been previously generated, lk4me will:
 
-- apply a shift by 1 character,
+- apply a shift by 1 character to the right in the sha-1 digest,
 - and retry this shift by 1 character up to 6 times in order to get a previously unused value.
 
 If lk4me fails to generate a not already used value after 6 tries, lk4me will declare it is unable to do it.
