@@ -33,8 +33,7 @@ if ($shorturl!=getURIbase()."...")
 {
 ?>
 
-Your short link:<br/>
-<span class="red"><?php echo $shorturl;?></span><br/>
+Your short link: <span class="red"><?php echo $shorturl;?></span><br/>
 
 <?php
 }
@@ -46,6 +45,7 @@ $qrcodefilepath = FilePathFromShortURL($shorturl).".png";
 if ((is_file($qrcodefilepath)) && ($shorturl!=getURIbase()."...")) 
 {
 ?>
+<br/>
 <img class="qrcode" src="<?php echo $qrcodefilepath;?>" alt="qrcode for <?php echo qrcodefilepath;?>" />
 <?php
 }
