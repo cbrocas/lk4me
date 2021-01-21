@@ -46,6 +46,7 @@ if ((is_file($qrcodefilepath)) && ($shorturl!=getURIbase()."..."))
 {
 ?>
 <br/>
+QR code containing your short link:<br/>
 <img class="qrcode" src="<?php echo $qrcodefilepath;?>" alt="qrcode for <?php echo qrcodefilepath;?>" />
 <?php
 }
