@@ -20,7 +20,7 @@
 ?>
 <!DOCTYPE html>
 <html><head>
-<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>    
+<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>    
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 <title><?php echo $message['Title']; ?></title>
 <link rel="stylesheet" type="text/css" href="html/style.css" />
