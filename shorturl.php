@@ -18,6 +18,10 @@
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
   
+  // Load the applications settings and the right translation file.
+  require('lib/appSettings.php');
+  require('lib/translations/'.$appSettings['lang'].'.php');
+
   include('html/lk4me.html.inc.php');
   require('lib/lk4me.php');
 
@@ -30,7 +34,7 @@
   // display error message if unable to generate a short url for a long one
   if (!generateShortURI($url, $baseurl, $shorturl))
   { 
-      echo "<span class=\"red\">ERROR: Unable to generate a free value of 6 characters for the short URL. Sorry</span> <br/>";
+      echo "<span class=\"red\">".$message['UnableToGenerateShortLink']."</span> <br/>";
 
   }
   else

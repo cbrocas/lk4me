@@ -1,6 +1,6 @@
 <?php
 /*
-  Copyright 2010 Christophe Brocas
+  Copyright 2021 Christophe Brocas
 
   This file is part of lk4me.
 
@@ -17,9 +17,9 @@
   You should have received a copy of the GNU General Public License
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
-?>
 
-<br/>
-<br/>
----<br/>
-lk4me: <a href="https://github.com/cbrocas/lk4me"><?php echo $message['Code']; ?></a> | <a href="https://github.com/cbrocas/lk4me/blob/master/COPYING"><?php echo $message['License']; ?> (GPL v3.0)</a> | <?php echo $message['IconsBy']; ?><a href="https://www.freepik.com" title="Freepik">Freepik</a>/<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+Global $appSettings;
+
+// current available lang option values: fr, en
+$appSettings['lang'] = 'en';
+?>

@@ -17,6 +17,9 @@
   You should have received a copy of the GNU General Public License
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
+  // Load the applications settings and the right translation file.
+  require('lib/appSettings.php');
+  require('lib/translations/'.$appSettings['lang'].'.php');
 
   require('lib/lk4me.php');
 
@@ -25,7 +28,7 @@
   
   if (!validShortURL($shortURL)) {
       include('html/lk4me.html.inc.php');
-      echo "Not a valid Short URL value. Bye !";
+      echo $message['InvalidShortURLValue'];
       exit;
   }
   	
@@ -35,6 +38,6 @@
   }
   else  { 
       include('html/lk4me.html.inc.php');
-      echo $shortURL." is not an existing short URL value.";
+      echo $shortURL.$message['NonExistingShortLink'];
   }
 ?>

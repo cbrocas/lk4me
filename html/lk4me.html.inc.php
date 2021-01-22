@@ -22,14 +22,14 @@
 <html><head>
 <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>    
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<title>Link-4-Me. Your URL shortener :)</title>
+<title><?php echo $message['Title']; ?></title>
 <link rel="stylesheet" type="text/css" href="html/style.css" />
 <link rel="icon" type="image/png" href="images/url16.png" />
 </head>
 
 <body >
 
-<img src="images/url64.png" alt="Link 4 me icon"> Link-4-Me. Your URL shortener.
+<img src="images/url64.png" alt=".<?php echo $message['AltIcon']; ?>."> <?php echo $message['Title']; ?>
 <br/>
 <br/>
 <br/>

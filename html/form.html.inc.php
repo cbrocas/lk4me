@@ -21,9 +21,9 @@
 
 <form id="url" name="URL" action="shorturl.php" method="GET" enctype="application/x-www-form-urlencoded" novalidate="novalidate">
 
-Your long URL :<br>
+<?php echo $message['URLToShorten']; ?><br>
 <input type="url" name="url" size="40" value="<?php if (isset($url)) echo $url; ?>" >
-<button type="submit" name="go">shorten !</button>
+<button type="submit" name="go"><?php echo $message['Shorten']; ?></button>
 </form>  
 <br/>
 
@@ -33,7 +33,7 @@ if ($shorturl!=getURIbase()."...")
 {
 ?>
 
-Your short link: <span class="red"><?php echo $shorturl;?></span><br/>
+<?php echo $message['ShortLink']; ?><span class="red"><?php echo $shorturl;?></span><br/>
 
 <?php
 }
@@ -46,7 +46,7 @@ if ((is_file($qrcodefilepath)) && ($shorturl!=getURIbase()."..."))
 {
 ?>
 <br/>
-QR code containing your short link:<br/>
+<?php echo $message['QRcode']; ?> <br/>
 <img class="qrcode" src="<?php echo $qrcodefilepath;?>" alt="qrcode for <?php echo qrcodefilepath;?>" />
 <?php
 }

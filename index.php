@@ -18,6 +18,10 @@
   along with lk4me.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+  // Load the applications settings and the right translation file.
+  require('lib/appSettings.php');
+  require('lib/translations/'.$appSettings['lang'].'.php');
+
   require('lib/lk4me.php');
   include('html/lk4me.html.inc.php');
   $shorturl=getURIbase()."...";
