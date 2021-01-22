@@ -21,5 +21,5 @@
 
 <br/>
 <br/>
----<br/>
-lk4me: <a href="https://github.com/cbrocas/lk4me"><?php echo $message['Code']; ?></a> | <a href="https://github.com/cbrocas/lk4me/blob/master/COPYING"><?php echo $message['License']; ?> (GPL v3.0)</a> | <?php echo $message['IconsBy']; ?><a href="https://www.freepik.com" title="Freepik">Freepik</a>/<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+<br/>
+<a href="index.php"><img src="images/home16.png"></a> | lk4me <a href="https://github.com/cbrocas/lk4me"><?php echo $message['Code']; ?></a> | <a href="https://github.com/cbrocas/lk4me/blob/master/COPYING"><?php echo $message['License']; ?> (GPL v3.0)</a> | <?php echo $message['IconsBy']; ?><a href="https://www.freepik.com" title="Freepik">Freepik</a>/<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
