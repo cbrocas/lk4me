@@ -30,7 +30,7 @@ $message['QRcode']='Le QR code contenant votre lien court : ';
 $message['Title']='Link-4-Me. Votre raccourcisseur d\'URL :)';
 $message['Code']='code';
 $message['License']='licence';
-$message['IconsBy']='icônes conçus par ';
+$message['IconsBy']='Icônes conçus par ';
 $message['AltIcon']='icône de lk4me';
 
 ?>

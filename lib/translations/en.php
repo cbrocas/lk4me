@@ -30,7 +30,7 @@ $message['QRcode']='QR code containing your short link: ';
 $message['Title']='Link-4-Me. Your URL shortener :)';
 $message['Code']='code';
 $message['License']='license';
-$message['IconsBy']='icons made by ';
+$message['IconsBy']='Icons made by ';
 $message['AltIcon']='lk4me icon';
 
 ?>
