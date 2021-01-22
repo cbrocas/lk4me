@@ -19,21 +19,33 @@
 */
 ?>
 
+<?php 
+// Use case 1: we display the original URL + the generated short link+its QRcode
+//             no form available
+if (isset($url)) 
+{
+  echo $message['InitialURL']; 
+  echo htmlentities($url, ENT_QUOTES, 'UTF-8')."<br/><br/>"; 
+}
+// Use case 2: we display the form to allow the user to enter an URL to shrink
+else
+{
+?>
 <form id="url" name="URL" action="shorturl.php" method="GET" enctype="application/x-www-form-urlencoded" novalidate="novalidate">
-
 <?php echo $message['URLToShorten']; ?><br>
-<input type="url" name="url" size="40" value="<?php if (isset($url)) echo $url; ?>" >
+<input type="url" name="url" size="40" value="">
 <button type="submit" name="go"><?php echo $message['Shorten']; ?></button>
 </form>  
 <br/>
-
 <?php
+}
+
 // Display shortened URL if its value has been updated
 if ($shorturl!=getURIbase()."...")
 {
 ?>
 
-<?php echo $message['ShortLink']; ?><span class="red"><?php echo $shorturl;?></span><br/>
+<?php echo "> ".$message['ShortLink']; ?><span class="red"><?php echo $shorturl;?></span><br/>
 
 <?php
 }
@@ -46,7 +58,7 @@ if ((is_file($qrcodefilepath)) && ($shorturl!=getURIbase()."..."))
 {
 ?>
 <br/>
-<?php echo $message['QRcode']; ?> <br/>
+<?php echo "> ".$message['QRcode']; ?> <br/>
 <img class="qrcode" src="<?php echo $qrcodefilepath;?>" alt="qrcode for <?php echo qrcodefilepath;?>" />
 <?php
 }

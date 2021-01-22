@@ -23,6 +23,7 @@ $message['InvalidShortLinkValue']=': not a valid Short URL value. Bye !';
 $message['NonExistingShortLink']=': this short link does not exists.';
 $message['UnableToGenerateShortLink']='ERROR: unable to generate a short link for this URL (no available value). Sorry.';
 $message['URLToShorten']='Enter the URL to shorten: ';
+$message['InitialURL']='Your initial URL: ';
 $message['Shorten']='shorten !';
 $message['ShortLink']='Your short link: ';
 $message['QRcode']='QR code containing your short link: ';

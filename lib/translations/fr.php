@@ -23,6 +23,7 @@ $message['InvalidShortURLValue']=' : ce lien court est invalide. Au revoir !';
 $message['NonExistingShortLink']=' : ce lien court n\'existe pas.';
 $message['UnableToGenerateShortLink']='Erreur : impossible de générer un lien court pour cette URL (aucune valeur disponible). Désolé.';
 $message['URLToShorten']='Saisir l\'adresse à raccourcir : ';
+$message['InitialURL']='Votre adresse initiale : ';
 $message['Shorten']='raccourcir !';
 $message['ShortLink']='Votre lien court : ';
 $message['QRcode']='Le QR code contenant votre lien court : ';

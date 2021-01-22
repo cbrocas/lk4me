@@ -29,7 +29,7 @@
 
 <body >
 
-<img src="images/url64.png" alt=".<?php echo $message['AltIcon']; ?>."> <?php echo $message['Title']; ?>
+<a href="index.php"><img src="images/url64.png" alt=".<?php echo $message['AltIcon']; ?>."></a> <?php echo $message['Title']; ?>
 <br/>
 <br/>
 <br/>
